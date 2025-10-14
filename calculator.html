@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartCalc | Calculator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+  <h1>🧠 Welcome, {{ username }}!</h1>
+  <form method="POST">
+    <input type="text" name="expression" placeholder="Enter expression (e.g. sin(pi/2))" required>
+    <button type="submit">Calculate</button>
+  </form>
+  <h3>Result: {{ result }}</h3>
+  <a href="{{ url_for('logout') }}" class="logout">Logout</a>
+</div>
+</body>
+</html>
